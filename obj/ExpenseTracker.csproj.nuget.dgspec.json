@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nikhi\\OneDrive - London Metropolitan University\\Third Year\\Data and web development\\ExpenseTracker\\ExpenseTracker.csproj": {}
+    "C:\\Users\\nikhi\\OneDrive - London Metropolitan University\\Third Year\\Aplication Development\\ExpenseTracker\\ExpenseTracker.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nikhi\\OneDrive - London Metropolitan University\\Third Year\\Data and web development\\ExpenseTracker\\ExpenseTracker.csproj": {
+    "C:\\Users\\nikhi\\OneDrive - London Metropolitan University\\Third Year\\Aplication Development\\ExpenseTracker\\ExpenseTracker.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nikhi\\OneDrive - London Metropolitan University\\Third Year\\Data and web development\\ExpenseTracker\\ExpenseTracker.csproj",
+        "projectUniqueName": "C:\\Users\\nikhi\\OneDrive - London Metropolitan University\\Third Year\\Aplication Development\\ExpenseTracker\\ExpenseTracker.csproj",
         "projectName": "ExpenseTracker",
-        "projectPath": "C:\\Users\\nikhi\\OneDrive - London Metropolitan University\\Third Year\\Data and web development\\ExpenseTracker\\ExpenseTracker.csproj",
+        "projectPath": "C:\\Users\\nikhi\\OneDrive - London Metropolitan University\\Third Year\\Aplication Development\\ExpenseTracker\\ExpenseTracker.csproj",
         "packagesPath": "C:\\Users\\nikhi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nikhi\\OneDrive - London Metropolitan University\\Third Year\\Data and web development\\ExpenseTracker\\obj\\",
+        "outputPath": "C:\\Users\\nikhi\\OneDrive - London Metropolitan University\\Third Year\\Aplication Development\\ExpenseTracker\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [

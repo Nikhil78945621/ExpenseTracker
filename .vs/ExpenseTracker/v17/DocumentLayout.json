@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\nikhi\\OneDrive - London Metropolitan University\\Third Year\\Data and web development\\ExpenseTracker\\",
+  "WorkspaceRootPath": "C:\\Users\\nikhi\\OneDrive - London Metropolitan University\\Third Year\\Aplication Development\\ExpenseTracker\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{47C166E5-D4C5-4BF8-850D-CA25C58F0C37}|ExpenseTracker.csproj|c:\\users\\nikhi\\onedrive - london metropolitan university\\third year\\data and web development\\expensetracker\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{47C166E5-D4C5-4BF8-850D-CA25C58F0C37}|ExpenseTracker.csproj|c:\\users\\nikhi\\onedrive - london metropolitan university\\third year\\aplication development\\expensetracker\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{47C166E5-D4C5-4BF8-850D-CA25C58F0C37}|ExpenseTracker.csproj|solutionrelative:components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{47C166E5-D4C5-4BF8-850D-CA25C58F0C37}|ExpenseTracker.csproj|c:\\users\\nikhi\\onedrive - london metropolitan university\\third year\\data and web development\\expensetracker\\components\\pages\\weather.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{47C166E5-D4C5-4BF8-850D-CA25C58F0C37}|ExpenseTracker.csproj|c:\\users\\nikhi\\onedrive - london metropolitan university\\third year\\aplication development\\expensetracker\\components\\pages\\weather.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{47C166E5-D4C5-4BF8-850D-CA25C58F0C37}|ExpenseTracker.csproj|solutionrelative:components\\pages\\weather.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
@@ -18,8 +18,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
@@ -28,22 +32,21 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Weather.razor",
-              "DocumentMoniker": "C:\\Users\\nikhi\\OneDrive - London Metropolitan University\\Third Year\\Data and web development\\ExpenseTracker\\Components\\Pages\\Weather.razor",
+              "DocumentMoniker": "C:\\Users\\nikhi\\OneDrive - London Metropolitan University\\Third Year\\Aplication Development\\ExpenseTracker\\Components\\Pages\\Weather.razor",
               "RelativeDocumentMoniker": "Components\\Pages\\Weather.razor",
-              "ToolTip": "C:\\Users\\nikhi\\OneDrive - London Metropolitan University\\Third Year\\Data and web development\\ExpenseTracker\\Components\\Pages\\Weather.razor",
+              "ToolTip": "C:\\Users\\nikhi\\OneDrive - London Metropolitan University\\Third Year\\Aplication Development\\ExpenseTracker\\Components\\Pages\\Weather.razor",
               "RelativeToolTip": "Components\\Pages\\Weather.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-03T13:27:17.445Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-03T13:27:17.445Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Home.razor",
-              "DocumentMoniker": "C:\\Users\\nikhi\\OneDrive - London Metropolitan University\\Third Year\\Data and web development\\ExpenseTracker\\Components\\Pages\\Home.razor",
+              "DocumentMoniker": "C:\\Users\\nikhi\\OneDrive - London Metropolitan University\\Third Year\\Aplication Development\\ExpenseTracker\\Components\\Pages\\Home.razor",
               "RelativeDocumentMoniker": "Components\\Pages\\Home.razor",
-              "ToolTip": "C:\\Users\\nikhi\\OneDrive - London Metropolitan University\\Third Year\\Data and web development\\ExpenseTracker\\Components\\Pages\\Home.razor",
+              "ToolTip": "C:\\Users\\nikhi\\OneDrive - London Metropolitan University\\Third Year\\Aplication Development\\ExpenseTracker\\Components\\Pages\\Home.razor",
               "RelativeToolTip": "Components\\Pages\\Home.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",

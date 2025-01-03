@@ -1,27 +1,27 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\nikhi\\OneDrive - London Metropolitan University\\Third Year\\Data and web development\\ExpenseTracker\\obj\\Debug\\net8.0-android\\scopedcss\\bundle\\ExpenseTracker.styles.css",
+      "Id": "C:\\Users\\nikhi\\OneDrive - London Metropolitan University\\Third Year\\Aplication Development\\ExpenseTracker\\obj\\Debug\\net8.0-android\\scopedcss\\bundle\\ExpenseTracker.styles.css",
       "PackagePath": "staticwebassets\\ExpenseTracker.styles.css"
     },
     {
-      "Id": "C:\\Users\\nikhi\\OneDrive - London Metropolitan University\\Third Year\\Data and web development\\ExpenseTracker\\wwwroot\\css\\app.css",
+      "Id": "C:\\Users\\nikhi\\OneDrive - London Metropolitan University\\Third Year\\Aplication Development\\ExpenseTracker\\wwwroot\\css\\app.css",
       "PackagePath": "staticwebassets\\css\\app.css"
     },
     {
-      "Id": "C:\\Users\\nikhi\\OneDrive - London Metropolitan University\\Third Year\\Data and web development\\ExpenseTracker\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Id": "C:\\Users\\nikhi\\OneDrive - London Metropolitan University\\Third Year\\Aplication Development\\ExpenseTracker\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\nikhi\\OneDrive - London Metropolitan University\\Third Year\\Data and web development\\ExpenseTracker\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\nikhi\\OneDrive - London Metropolitan University\\Third Year\\Aplication Development\\ExpenseTracker\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\nikhi\\OneDrive - London Metropolitan University\\Third Year\\Data and web development\\ExpenseTracker\\wwwroot\\favicon.png",
+      "Id": "C:\\Users\\nikhi\\OneDrive - London Metropolitan University\\Third Year\\Aplication Development\\ExpenseTracker\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
-      "Id": "C:\\Users\\nikhi\\OneDrive - London Metropolitan University\\Third Year\\Data and web development\\ExpenseTracker\\wwwroot\\index.html",
+      "Id": "C:\\Users\\nikhi\\OneDrive - London Metropolitan University\\Third Year\\Aplication Development\\ExpenseTracker\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },
     {
