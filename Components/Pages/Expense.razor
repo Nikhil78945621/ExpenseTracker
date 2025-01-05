@@ -1,0 +1,204 @@
+﻿@page "/expense"
+@inject ExpenseTracker.Services.UserService UserService
+
+@code {
+    private ExpenseTracker.Components.model.AppData data = new ExpenseTracker.Components.model.AppData();
+    private ExpenseTracker.Components.model.Expense newExpense = new();
+    private int selectedUserId;
+    private bool showConfirmation = false; // To show confirmation after adding expense
+
+    private string tagFilter = string.Empty;
+    private DateTime? startDateFilter;
+    private DateTime? endDateFilter;
+    private string searchQuery = string.Empty;
+
+    protected override void OnInitialized()
+    {
+        data = UserService.LoadData();
+    }
+
+    private void AddExpense()
+    {
+        newExpense.Id = data.Expenses.Count > 0
+            ? data.Expenses.Max(e => e.Id) + 1
+            : 1;
+        newExpense.UserId = selectedUserId; // Associate expense with the selected user
+        data.Expenses.Add(newExpense);
+        UserService.SaveData(data);
+        newExpense = new(); // Reset form
+        showConfirmation = true; // Show confirmation message
+    }
+
+    private IEnumerable<ExpenseTracker.Components.model.Expense> GetFilteredExpenses()
+    {
+        var filteredExpenses = data.Expenses.Where(e => e.UserId == selectedUserId);
+
+        if (!string.IsNullOrEmpty(tagFilter))
+        {
+            filteredExpenses = filteredExpenses.Where(e => e.Tag.Contains(tagFilter, StringComparison.OrdinalIgnoreCase));
+        }
+
+        if (startDateFilter.HasValue)
+        {
+            filteredExpenses = filteredExpenses.Where(e => e.Date >= startDateFilter.Value);
+        }
+
+        if (endDateFilter.HasValue)
+        {
+            filteredExpenses = filteredExpenses.Where(e => e.Date <= endDateFilter.Value);
+        }
+
+        if (!string.IsNullOrEmpty(searchQuery))
+        {
+            filteredExpenses = filteredExpenses.Where(e => e.Note.Contains(searchQuery, StringComparison.OrdinalIgnoreCase));
+        }
+
+        return filteredExpenses.OrderBy(e => e.Date); // Sort by Date
+    }
+}
+
+<h3 class="text-center text-danger mt-4">Expense Tracker</h3>
+
+<div class="container mt-4">
+    <!-- User Selection -->
+    <div class="card shadow-sm mb-4">
+        <div class="card-header bg-danger text-white"><strong>Select User</strong></div>
+        <div class="card-body">
+            <select class="form-select" @bind="selectedUserId">
+                <option value="">-- Select User --</option>
+                @foreach (var user in data.Users)
+                {
+                    <option value="@user.Id">@user.Name</option>
+                }
+            </select>
+        </div>
+    </div>
+
+    @if (selectedUserId > 0)
+    {
+        <!-- Confirmation Message -->
+        @if (showConfirmation)
+        {
+            <div class="alert alert-success text-center">Expense added successfully!</div>
+        }
+
+        <!-- Filter Section -->
+        <div class="card mb-4">
+            <div class="card-header bg-light"><strong>Filters</strong></div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <label class="form-label">Tag:</label>
+                    <input type="text" class="form-control" @bind="tagFilter" placeholder="Filter by tag (e.g., Food, Rent)" />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Start Date:</label>
+                    <input type="date" class="form-control" @bind="startDateFilter" />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">End Date:</label>
+                    <input type="date" class="form-control" @bind="endDateFilter" />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Search:</label>
+                    <input type="text" class="form-control" @bind="searchQuery" placeholder="Search by note" />
+                </div>
+            </div>
+        </div>
+
+        <!-- Expense Table -->
+        <div class="card shadow-sm">
+            <div class="card-header bg-dark text-white"><strong>Expense Details</strong></div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover">
+                        <thead class="table-danger">
+                            <tr>
+                                <th>Date</th>
+                                <th>Amount</th>
+                                <th>Tag</th>
+                                <th>Note</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var expense in GetFilteredExpenses())
+                            {
+                                <tr>
+                                    <td>@expense.Date.ToShortDateString()</td>
+                                    <td class="text-danger">@expense.Amount</td>
+                                    <td>@expense.Tag</td>
+                                    <td>@expense.Note</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add Expense Form -->
+        <div class="card mt-4 shadow-sm">
+            <div class="card-header bg-secondary text-white"><strong>Add New Expense</strong></div>
+            <div class="card-body">
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Date:</label>
+                        <input type="date" class="form-control" @bind="newExpense.Date" />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Amount:</label>
+                        <input type="number" class="form-control" @bind="newExpense.Amount" />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Tag:</label>
+                        <input type="text" class="form-control" @bind="newExpense.Tag" placeholder="Enter tag (e.g., Food, Rent)" />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Note:</label>
+                        <input type="text" class="form-control" @bind="newExpense.Note" placeholder="Enter note (optional)" />
+                    </div>
+                    <button type="button" class="btn btn-danger w-100" @onclick="AddExpense">Add Expense</button>
+                </form>
+            </div>
+        </div>
+    }
+</div>
+
+<!-- Custom Styling -->
+<style>
+    .container {
+        max-width: 900px;
+    }
+
+    .card {
+        border-radius: 8px;
+    }
+
+    .card-header {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .form-control, .form-select {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .table th, .table td {
+        text-align: center;
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .table-responsive {
+        overflow-x: auto;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .alert {
+        font-size: 18px;
+    }
+</style>

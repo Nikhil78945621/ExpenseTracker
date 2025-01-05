@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using ExpenseTracker.Services;
 
 namespace ExpenseTracker
 {
@@ -19,6 +20,7 @@ namespace ExpenseTracker
 #if DEBUG
     		builder.Services.AddBlazorWebViewDeveloperTools();
     		builder.Logging.AddDebug();
+            builder.Services.AddSingleton<UserService>();
 #endif
 
             return builder.Build();

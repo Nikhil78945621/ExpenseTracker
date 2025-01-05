@@ -10,7 +10,7 @@
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>com.companyname.expensetracker</PackageIdentityName>
     <PackageIdentityPublisher>CN=User Name</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\</IntermediateOutputPath>
     <RemoteDeploymentType>CopyToDevice</RemoteDeploymentType>
     <PackageRegistrationPath>
     </PackageRegistrationPath>
@@ -18,7 +18,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>
     </WindowsSdkPath>
-    <LayoutDir>C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppX</LayoutDir>
+    <LayoutDir>C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppX</LayoutDir>
     <RegisteredManifestChecksum>46B0A1313FBF938E95E83E5E26682F039BBBFEB4821039ADD61F4D6A530BDD82</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>com.companyname.expensetracker_1.0.0.1_x64__9zz4h110yvjzm</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>com.companyname.expensetracker_9zz4h110yvjzm!App</RegisteredUserModeAppID>
@@ -27,284 +27,284 @@
     <RegisteredVersion>1.0.0.1</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-01-03T13:27:33.553</Modified>
+      <Modified>2025-01-05T06:51:23.101</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2025-01-03T13:27:33.086</Modified>
+      <Modified>2025-01-05T00:58:03.699</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ExpenseTracker.runtimeconfig.json">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ExpenseTracker.runtimeconfig.json">
       <PackagePath>ExpenseTracker.runtimeconfig.json</PackagePath>
-      <Modified>2025-01-03T13:27:32.337</Modified>
+      <Modified>2025-01-05T00:58:02.936</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ExpenseTracker.dll">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ExpenseTracker.dll">
       <PackagePath>ExpenseTracker.dll</PackagePath>
-      <Modified>2025-01-03T13:27:29.884</Modified>
+      <Modified>2025-01-05T06:51:22.513</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>ExpenseTracker.exe</PackagePath>
-      <Modified>2025-01-03T13:27:29.925</Modified>
+      <Modified>2025-01-05T06:51:22.531</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\Resources\Raw\AboutAssets.txt">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
       <Modified>2025-01-03T13:25:53.919</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\wwwroot\css\app.css">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\wwwroot\css\app.css">
       <PackagePath>wwwroot\css\app.css</PackagePath>
       <Modified>2025-01-03T13:25:53.978</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\wwwroot\css\bootstrap\bootstrap.min.css">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\wwwroot\css\bootstrap\bootstrap.min.css">
       <PackagePath>wwwroot\css\bootstrap\bootstrap.min.css</PackagePath>
       <Modified>2025-01-03T13:25:53.981</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\wwwroot\css\bootstrap\bootstrap.min.css.map">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\wwwroot\css\bootstrap\bootstrap.min.css.map">
       <PackagePath>wwwroot\css\bootstrap\bootstrap.min.css.map</PackagePath>
       <Modified>2025-01-03T13:25:53.985</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\wwwroot\favicon.png">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\wwwroot\favicon.png">
       <PackagePath>wwwroot\favicon.png</PackagePath>
       <Modified>2025-01-03T13:25:53.973</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\wwwroot\index.html">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\wwwroot\index.html">
       <PackagePath>wwwroot\index.html</PackagePath>
       <Modified>2025-01-03T13:25:53.975</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
       <PackagePath>splashSplashScreen.scale-100.png</PackagePath>
-      <Modified>2025-01-03T13:26:44.543</Modified>
+      <Modified>2025-01-05T00:57:54.604</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png">
       <PackagePath>splashSplashScreen.scale-125.png</PackagePath>
-      <Modified>2025-01-03T13:26:44.590</Modified>
+      <Modified>2025-01-05T00:57:54.633</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png">
       <PackagePath>splashSplashScreen.scale-150.png</PackagePath>
-      <Modified>2025-01-03T13:26:44.655</Modified>
+      <Modified>2025-01-05T00:57:54.675</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png">
       <PackagePath>splashSplashScreen.scale-200.png</PackagePath>
-      <Modified>2025-01-03T13:26:44.756</Modified>
+      <Modified>2025-01-05T00:57:54.731</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png">
       <PackagePath>splashSplashScreen.scale-400.png</PackagePath>
-      <Modified>2025-01-03T13:26:45.022</Modified>
+      <Modified>2025-01-05T00:57:54.918</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf">
       <PackagePath>OpenSans-Regular.ttf</PackagePath>
       <Modified>2025-01-03T13:25:53.906</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
-      <Modified>2025-01-03T13:26:47.933</Modified>
+      <Modified>2025-01-05T00:57:59.474</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
       <PackagePath>appiconLargeTile.scale-100.png</PackagePath>
-      <Modified>2025-01-03T13:26:47.899</Modified>
+      <Modified>2025-01-05T00:57:59.435</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
       <PackagePath>appiconLargeTile.scale-125.png</PackagePath>
-      <Modified>2025-01-03T13:26:47.899</Modified>
+      <Modified>2025-01-05T00:57:59.434</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
       <PackagePath>appiconLargeTile.scale-150.png</PackagePath>
-      <Modified>2025-01-03T13:26:47.898</Modified>
+      <Modified>2025-01-05T00:57:59.433</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
       <PackagePath>appiconLargeTile.scale-200.png</PackagePath>
-      <Modified>2025-01-03T13:26:47.897</Modified>
+      <Modified>2025-01-05T00:57:59.432</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
       <PackagePath>appiconLargeTile.scale-400.png</PackagePath>
-      <Modified>2025-01-03T13:26:47.897</Modified>
+      <Modified>2025-01-05T00:57:59.431</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-16.png</PackagePath>
-      <Modified>2025-01-03T13:26:47.918</Modified>
+      <Modified>2025-01-05T00:57:59.461</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-24.png">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-24.png</PackagePath>
-      <Modified>2025-01-03T13:26:47.917</Modified>
+      <Modified>2025-01-05T00:57:59.460</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-256.png</PackagePath>
-      <Modified>2025-01-03T13:26:47.915</Modified>
+      <Modified>2025-01-05T00:57:59.456</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-32.png</PackagePath>
-      <Modified>2025-01-03T13:26:47.916</Modified>
+      <Modified>2025-01-05T00:57:59.458</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-48.png</PackagePath>
-      <Modified>2025-01-03T13:26:47.916</Modified>
+      <Modified>2025-01-05T00:57:59.457</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-16.png</PackagePath>
-      <Modified>2025-01-03T13:26:47.922</Modified>
+      <Modified>2025-01-05T00:57:59.465</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-24.png">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-24.png</PackagePath>
-      <Modified>2025-01-03T13:26:47.921</Modified>
+      <Modified>2025-01-05T00:57:59.464</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-256.png</PackagePath>
-      <Modified>2025-01-03T13:26:47.919</Modified>
+      <Modified>2025-01-05T00:57:59.462</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-32.png</PackagePath>
-      <Modified>2025-01-03T13:26:47.921</Modified>
+      <Modified>2025-01-05T00:57:59.464</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-48.png</PackagePath>
-      <Modified>2025-01-03T13:26:47.920</Modified>
+      <Modified>2025-01-05T00:57:59.463</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
       <PackagePath>appiconLogo.scale-100.png</PackagePath>
-      <Modified>2025-01-03T13:26:47.932</Modified>
+      <Modified>2025-01-05T00:57:59.473</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
       <PackagePath>appiconLogo.scale-125.png</PackagePath>
-      <Modified>2025-01-03T13:26:47.931</Modified>
+      <Modified>2025-01-05T00:57:59.472</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
       <PackagePath>appiconLogo.scale-150.png</PackagePath>
-      <Modified>2025-01-03T13:26:47.929</Modified>
+      <Modified>2025-01-05T00:57:59.471</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
       <PackagePath>appiconLogo.scale-200.png</PackagePath>
-      <Modified>2025-01-03T13:26:47.929</Modified>
+      <Modified>2025-01-05T00:57:59.471</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
       <PackagePath>appiconLogo.scale-400.png</PackagePath>
-      <Modified>2025-01-03T13:26:47.928</Modified>
+      <Modified>2025-01-05T00:57:59.470</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png">
       <PackagePath>appiconLogo.targetsize-16.png</PackagePath>
-      <Modified>2025-01-03T13:26:47.928</Modified>
+      <Modified>2025-01-05T00:57:59.469</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png">
       <PackagePath>appiconLogo.targetsize-24.png</PackagePath>
-      <Modified>2025-01-03T13:26:47.926</Modified>
+      <Modified>2025-01-05T00:57:59.468</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png">
       <PackagePath>appiconLogo.targetsize-256.png</PackagePath>
-      <Modified>2025-01-03T13:26:47.924</Modified>
+      <Modified>2025-01-05T00:57:59.466</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png">
       <PackagePath>appiconLogo.targetsize-32.png</PackagePath>
-      <Modified>2025-01-03T13:26:47.926</Modified>
+      <Modified>2025-01-05T00:57:59.468</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png">
       <PackagePath>appiconLogo.targetsize-48.png</PackagePath>
-      <Modified>2025-01-03T13:26:47.925</Modified>
+      <Modified>2025-01-05T00:57:59.467</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
       <PackagePath>appiconMediumTile.scale-100.png</PackagePath>
-      <Modified>2025-01-03T13:26:47.906</Modified>
+      <Modified>2025-01-05T00:57:59.446</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
       <PackagePath>appiconMediumTile.scale-125.png</PackagePath>
-      <Modified>2025-01-03T13:26:47.906</Modified>
+      <Modified>2025-01-05T00:57:59.445</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
       <PackagePath>appiconMediumTile.scale-150.png</PackagePath>
-      <Modified>2025-01-03T13:26:47.905</Modified>
+      <Modified>2025-01-05T00:57:59.444</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
       <PackagePath>appiconMediumTile.scale-200.png</PackagePath>
-      <Modified>2025-01-03T13:26:47.905</Modified>
+      <Modified>2025-01-05T00:57:59.442</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
       <PackagePath>appiconMediumTile.scale-400.png</PackagePath>
-      <Modified>2025-01-03T13:26:47.904</Modified>
+      <Modified>2025-01-05T00:57:59.441</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
       <PackagePath>appiconSmallTile.scale-100.png</PackagePath>
-      <Modified>2025-01-03T13:26:47.910</Modified>
+      <Modified>2025-01-05T00:57:59.452</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
       <PackagePath>appiconSmallTile.scale-125.png</PackagePath>
-      <Modified>2025-01-03T13:26:47.909</Modified>
+      <Modified>2025-01-05T00:57:59.451</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
       <PackagePath>appiconSmallTile.scale-150.png</PackagePath>
-      <Modified>2025-01-03T13:26:47.909</Modified>
+      <Modified>2025-01-05T00:57:59.450</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
       <PackagePath>appiconSmallTile.scale-200.png</PackagePath>
-      <Modified>2025-01-03T13:26:47.908</Modified>
+      <Modified>2025-01-05T00:57:59.449</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
       <PackagePath>appiconSmallTile.scale-400.png</PackagePath>
-      <Modified>2025-01-03T13:26:47.907</Modified>
+      <Modified>2025-01-05T00:57:59.447</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
       <PackagePath>appiconStoreLogo.scale-100.png</PackagePath>
-      <Modified>2025-01-03T13:26:47.914</Modified>
+      <Modified>2025-01-05T00:57:59.456</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
       <PackagePath>appiconStoreLogo.scale-125.png</PackagePath>
-      <Modified>2025-01-03T13:26:47.913</Modified>
+      <Modified>2025-01-05T00:57:59.456</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
       <PackagePath>appiconStoreLogo.scale-150.png</PackagePath>
-      <Modified>2025-01-03T13:26:47.913</Modified>
+      <Modified>2025-01-05T00:57:59.455</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
       <PackagePath>appiconStoreLogo.scale-200.png</PackagePath>
-      <Modified>2025-01-03T13:26:47.911</Modified>
+      <Modified>2025-01-05T00:57:59.454</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
       <PackagePath>appiconStoreLogo.scale-400.png</PackagePath>
-      <Modified>2025-01-03T13:26:47.911</Modified>
+      <Modified>2025-01-05T00:57:59.453</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
       <PackagePath>appiconWideTile.scale-100.png</PackagePath>
-      <Modified>2025-01-03T13:26:47.903</Modified>
+      <Modified>2025-01-05T00:57:59.440</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
       <PackagePath>appiconWideTile.scale-125.png</PackagePath>
-      <Modified>2025-01-03T13:26:47.903</Modified>
+      <Modified>2025-01-05T00:57:59.439</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
       <PackagePath>appiconWideTile.scale-150.png</PackagePath>
-      <Modified>2025-01-03T13:26:47.902</Modified>
+      <Modified>2025-01-05T00:57:59.438</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
       <PackagePath>appiconWideTile.scale-200.png</PackagePath>
-      <Modified>2025-01-03T13:26:47.901</Modified>
+      <Modified>2025-01-05T00:57:59.437</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
       <PackagePath>appiconWideTile.scale-400.png</PackagePath>
-      <Modified>2025-01-03T13:26:47.901</Modified>
+      <Modified>2025-01-05T00:57:59.436</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>
-      <Modified>2025-01-03T13:26:47.936</Modified>
+      <Modified>2025-01-05T00:57:59.478</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
       <PackagePath>dotnet_bot.scale-125.png</PackagePath>
-      <Modified>2025-01-03T13:26:47.935</Modified>
+      <Modified>2025-01-05T00:57:59.478</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
       <PackagePath>dotnet_bot.scale-150.png</PackagePath>
-      <Modified>2025-01-03T13:26:47.935</Modified>
+      <Modified>2025-01-05T00:57:59.476</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
       <PackagePath>dotnet_bot.scale-200.png</PackagePath>
-      <Modified>2025-01-03T13:26:47.934</Modified>
+      <Modified>2025-01-05T00:57:59.476</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
-      <Modified>2025-01-03T13:26:47.933</Modified>
+      <Modified>2025-01-05T00:57:59.475</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ExpenseTracker.deps.json">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ExpenseTracker.deps.json">
       <PackagePath>ExpenseTracker.deps.json</PackagePath>
-      <Modified>2025-01-03T13:27:31.949</Modified>
+      <Modified>2025-01-05T00:58:02.492</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\nikhi\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.54\lib\net8.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>
@@ -658,9 +658,9 @@
       <PackagePath>Microsoft.WindowsAppRuntime.Bootstrap.dll</PackagePath>
       <Modified>2024-06-25T19:48:44.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\staticwebassets.build.endpoints.json">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\staticwebassets.build.endpoints.json">
       <PackagePath>ExpenseTracker.staticwebassets.endpoints.json</PackagePath>
-      <Modified>2025-01-03T13:26:37.227</Modified>
+      <Modified>2025-01-05T00:57:42.108</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\nikhi\.nuget\packages\microsoft.maui.controls.compatibility\8.0.83\lib\net8.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.pri">
       <PackagePath>Microsoft.Maui.Controls.Compatibility.pri</PackagePath>
@@ -674,19 +674,19 @@
       <PackagePath>Microsoft.Maui.pri</PackagePath>
       <Modified>2024-10-29T21:54:22.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\scopedcss\bundle\ExpenseTracker.styles.css">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\scopedcss\bundle\ExpenseTracker.styles.css">
       <PackagePath>wwwroot\ExpenseTracker.styles.css</PackagePath>
-      <Modified>2025-01-03T13:26:36.959</Modified>
+      <Modified>2025-01-05T00:57:41.995</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\scopedcss\projectbundle\ExpenseTracker.bundle.scp.css">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\scopedcss\projectbundle\ExpenseTracker.bundle.scp.css">
       <PackagePath>wwwroot\ExpenseTracker.au9wn8c9iq.bundle.scp.css</PackagePath>
-      <Modified>2025-01-03T13:26:36.966</Modified>
+      <Modified>2025-01-05T00:57:41.999</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\Components\Layout\MainLayout.razor.css">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\Components\Layout\MainLayout.razor.css">
       <PackagePath>Components\Layout\MainLayout.razor.css</PackagePath>
       <Modified>2025-01-03T13:25:53.996</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Data and web development\ExpenseTracker\Components\Layout\NavMenu.razor.css">
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\Components\Layout\NavMenu.razor.css">
       <PackagePath>Components\Layout\NavMenu.razor.css</PackagePath>
       <Modified>2025-01-03T13:25:54.000</Modified>
     </AppxPackagedFile>

@@ -1,0 +1,194 @@
+﻿@page "/income"
+@inject ExpenseTracker.Services.UserService UserService
+
+@code {
+    private ExpenseTracker.Components.model.AppData data = new ExpenseTracker.Components.model.AppData();
+    private ExpenseTracker.Components.model.Income newIncome = new();
+    private int selectedUserId;
+    private bool showConfirmation = false; // To show confirmation after adding income
+
+    private DateTime? startDateFilter;
+    private DateTime? endDateFilter;
+    private string searchQuery = string.Empty;
+
+    protected override void OnInitialized()
+    {
+        data = UserService.LoadData();
+    }
+
+    private void AddIncome()
+    {
+        newIncome.Id = data.Incomes.Count > 0
+            ? data.Incomes.Max(i => i.Id) + 1
+            : 1;
+        newIncome.UserId = selectedUserId; // Assign the selected user
+        data.Incomes.Add(newIncome);
+        UserService.SaveData(data);
+        newIncome = new(); // Reset the form
+        showConfirmation = true; // Show confirmation message
+    }
+
+    private IEnumerable<ExpenseTracker.Components.model.Income> GetFilteredIncomes()
+    {
+        var filteredIncomes = data.Incomes.Where(i => i.UserId == selectedUserId);
+
+        if (startDateFilter.HasValue)
+        {
+            filteredIncomes = filteredIncomes.Where(i => i.Date >= startDateFilter.Value);
+        }
+
+        if (endDateFilter.HasValue)
+        {
+            filteredIncomes = filteredIncomes.Where(i => i.Date <= endDateFilter.Value);
+        }
+
+        if (!string.IsNullOrEmpty(searchQuery))
+        {
+            filteredIncomes = filteredIncomes.Where(i => i.Source.Contains(searchQuery, StringComparison.OrdinalIgnoreCase));
+        }
+
+        return filteredIncomes.OrderBy(i => i.Date); // Sort by Date
+    }
+}
+
+<h3 class="text-center text-primary mt-4">Income Management</h3>
+
+<div class="container mt-4">
+    <!-- User Selection -->
+    <div class="card shadow-sm mb-4">
+        <div class="card-header bg-primary text-white"><strong>Select User</strong></div>
+        <div class="card-body">
+            <select class="form-select" @bind="selectedUserId">
+                <option value="">-- Select User --</option>
+                @foreach (var user in data.Users)
+                {
+                    <option value="@user.Id">@user.Name</option>
+                }
+            </select>
+        </div>
+    </div>
+
+    @if (selectedUserId > 0)
+    {
+        <!-- Confirmation Message -->
+        @if (showConfirmation)
+        {
+            <div class="alert alert-success text-center">Income added successfully!</div>
+        }
+
+        <!-- Filter Section -->
+        <div class="card mb-4">
+            <div class="card-header bg-light"><strong>Filters</strong></div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <label class="form-label">Start Date:</label>
+                    <input type="date" class="form-control" @bind="startDateFilter" />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">End Date:</label>
+                    <input type="date" class="form-control" @bind="endDateFilter" />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Search:</label>
+                    <input type="text" class="form-control" @bind="searchQuery" placeholder="Search by source" />
+                </div>
+            </div>
+        </div>
+
+        <!-- Income Table -->
+        <div class="card shadow-sm">
+            <div class="card-header bg-secondary text-white"><strong>Income Details</strong></div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Date</th>
+                                <th>Source</th>
+                                <th>Amount</th>
+                                <th>Note</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var income in GetFilteredIncomes())
+                            {
+                                <tr>
+                                    <td>@income.Date.ToShortDateString()</td>
+                                    <td>@income.Source</td>
+                                    <td class="text-success">@income.Amount</td>
+                                    <td>@income.Note</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add Income Form -->
+        <div class="card mt-4 shadow-sm">
+            <div class="card-header bg-dark text-white"><strong>Add New Income</strong></div>
+            <div class="card-body">
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Date:</label>
+                        <input type="date" class="form-control" @bind="newIncome.Date" />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Source:</label>
+                        <input type="text" class="form-control" @bind="newIncome.Source" placeholder="Enter income source" />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Amount:</label>
+                        <input type="number" class="form-control" @bind="newIncome.Amount" />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Note:</label>
+                        <input type="text" class="form-control" @bind="newIncome.Note" placeholder="Enter note (optional)" />
+                    </div>
+                    <button type="button" class="btn btn-success w-100" @onclick="AddIncome">Add Income</button>
+                </form>
+            </div>
+        </div>
+    }
+</div>
+
+<!-- Custom Styling -->
+<style>
+    .container {
+        max-width: 900px;
+    }
+
+    .card {
+        border-radius: 8px;
+    }
+
+    .card-header {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .form-control, .form-select {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .table th, .table td {
+        text-align: center;
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .table-responsive {
+        overflow-x: auto;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .alert {
+        font-size: 18px;
+    }
+</style>

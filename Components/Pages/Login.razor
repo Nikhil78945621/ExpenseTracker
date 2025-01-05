@@ -1,0 +1,41 @@
+﻿@page "/login"
+@inject ExpenseTracker.Services.UserService UserService
+@inject NavigationManager NavigationManager
+
+<h3>Login</h3>
+
+@if (!string.IsNullOrEmpty(errorMessage))
+{
+    <p style="color: red;">@errorMessage</p>
+}
+
+<form>
+    <label>Email:</label>
+    <input type="email" @bind="email" /><br />
+    <label>Password:</label>
+    <input type="password" @bind="password" /><br />
+    <button type="button" @onclick="LoginUser">Login</button>
+</form>
+
+@code {
+    private string email = string.Empty;
+    private string password = string.Empty;
+    private string? errorMessage;
+
+    private void LoginUser()
+    {
+        var user = UserService.Login(email, password);
+
+        if (user != null)
+        {
+            // Clear error message if login is successful
+            errorMessage = null;
+            NavigationManager.NavigateTo("/");
+        }
+        else
+        {
+            // Set error message if login fails
+            errorMessage = "Invalid email or password.";
+        }
+    }
+}
