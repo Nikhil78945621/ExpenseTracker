@@ -1,6 +1,9 @@
 ﻿@page "/login"
 @inject ExpenseTracker.Services.UserService UserService
 @inject NavigationManager NavigationManager
+@using ExpenseTracker.Components.Layout
+@layout FirstLayout
+<link rel="stylesheet" href="css/Login.css" />
 
 <h3>Login</h3>
 
@@ -15,6 +18,8 @@
     <label>Password:</label>
     <input type="password" @bind="password" /><br />
     <button type="button" @onclick="LoginUser">Login</button>
+    <p>Don't have an account?</p><a href="/register">Register Here</a>
+   
 </form>
 
 @code {

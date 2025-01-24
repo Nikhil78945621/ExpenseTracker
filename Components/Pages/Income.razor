@@ -1,11 +1,13 @@
 ﻿@page "/income"
 @inject ExpenseTracker.Services.UserService UserService
+@inject NavigationManager Navigation
+<link rel="stylesheet" href="css/Income.css" />
 
 @code {
     private ExpenseTracker.Components.model.AppData data = new ExpenseTracker.Components.model.AppData();
     private ExpenseTracker.Components.model.Income newIncome = new();
-    private int selectedUserId;
-    private bool showConfirmation = false; // To show confirmation after adding income
+    private ExpenseTracker.Components.model.User? loggedInUser;
+    private bool showConfirmation = false; // Show confirmation after adding income
 
     private DateTime? startDateFilter;
     private DateTime? endDateFilter;
@@ -13,15 +15,22 @@
 
     protected override void OnInitialized()
     {
-        data = UserService.LoadData();
+        loggedInUser = UserService.GetLoggedInUser(); // Get the logged-in user
+        if (loggedInUser == null)
+        {
+            Navigation.NavigateTo("/login", true); // Redirect to login if no user is logged in
+        }
+        else
+        {
+            data = UserService.LoadData();
+        }
     }
 
     private void AddIncome()
     {
-        newIncome.Id = data.Incomes.Count > 0
-            ? data.Incomes.Max(i => i.Id) + 1
-            : 1;
-        newIncome.UserId = selectedUserId; // Assign the selected user
+        newIncome.Id = data.Incomes.Count > 0 ? data.Incomes.Max(i => i.Id) + 1 : 1;
+        newIncome.UserId = loggedInUser?.Id ?? 0; // Use null-safe operator
+        newIncome.Source ??= "Unknown"; // Set default value if null
         data.Incomes.Add(newIncome);
         UserService.SaveData(data);
         newIncome = new(); // Reset the form
@@ -30,7 +39,9 @@
 
     private IEnumerable<ExpenseTracker.Components.model.Income> GetFilteredIncomes()
     {
-        var filteredIncomes = data.Incomes.Where(i => i.UserId == selectedUserId);
+        if (loggedInUser == null) return Enumerable.Empty<ExpenseTracker.Components.model.Income>();
+
+        var filteredIncomes = data.Incomes.Where(i => i.UserId == loggedInUser.Id); // Show only the logged-in user's income
 
         if (startDateFilter.HasValue)
         {
@@ -44,7 +55,8 @@
 
         if (!string.IsNullOrEmpty(searchQuery))
         {
-            filteredIncomes = filteredIncomes.Where(i => i.Source.Contains(searchQuery, StringComparison.OrdinalIgnoreCase));
+            filteredIncomes = filteredIncomes.Where(i => !string.IsNullOrEmpty(i.Source) &&
+                i.Source.Contains(searchQuery, StringComparison.OrdinalIgnoreCase));
         }
 
         return filteredIncomes.OrderBy(i => i.Date); // Sort by Date
@@ -54,21 +66,7 @@
 <h3 class="text-center text-primary mt-4">Income Management</h3>
 
 <div class="container mt-4">
-    <!-- User Selection -->
-    <div class="card shadow-sm mb-4">
-        <div class="card-header bg-primary text-white"><strong>Select User</strong></div>
-        <div class="card-body">
-            <select class="form-select" @bind="selectedUserId">
-                <option value="">-- Select User --</option>
-                @foreach (var user in data.Users)
-                {
-                    <option value="@user.Id">@user.Name</option>
-                }
-            </select>
-        </div>
-    </div>
-
-    @if (selectedUserId > 0)
+    @if (loggedInUser != null)
     {
         <!-- Confirmation Message -->
         @if (showConfirmation)
@@ -114,9 +112,9 @@
                             {
                                 <tr>
                                     <td>@income.Date.ToShortDateString()</td>
-                                    <td>@income.Source</td>
+                                    <td>@(income.Source ?? "N/A")</td> <!-- Default to "N/A" if Source is null -->
                                     <td class="text-success">@income.Amount</td>
-                                    <td>@income.Note</td>
+                                    <td>@(income.Note ?? "No Notes")</td>
                                 </tr>
                             }
                         </tbody>
@@ -152,43 +150,3 @@
         </div>
     }
 </div>
-
-<!-- Custom Styling -->
-<style>
-    .container {
-        max-width: 900px;
-    }
-
-    .card {
-        border-radius: 8px;
-    }
-
-    .card-header {
-        font-size: 18px;
-        font-weight: bold;
-    }
-
-    .form-control, .form-select {
-        font-size: 16px;
-        padding: 10px;
-    }
-
-    .table th, .table td {
-        text-align: center;
-        font-size: 16px;
-        padding: 12px;
-    }
-
-    .table-responsive {
-        overflow-x: auto;
-    }
-
-    .btn {
-        font-size: 16px;
-        padding: 10px;
-    }
-
-    .alert {
-        font-size: 18px;
-    }
-</style>

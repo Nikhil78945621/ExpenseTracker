@@ -49,6 +49,24 @@
     <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\wwwroot\css\bootstrap\bootstrap.min.css.map">
       <PackagePath>wwwroot\css\bootstrap\bootstrap.min.css.map</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\wwwroot\css\Dashboard.css">
+      <PackagePath>wwwroot\css\Dashboard.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\wwwroot\css\Debt.css">
+      <PackagePath>wwwroot\css\Debt.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\wwwroot\css\Expense.css">
+      <PackagePath>wwwroot\css\Expense.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\wwwroot\css\Income.css">
+      <PackagePath>wwwroot\css\Income.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\wwwroot\css\Login.css">
+      <PackagePath>wwwroot\css\Login.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\wwwroot\css\Register.css">
+      <PackagePath>wwwroot\css\Register.css</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\wwwroot\favicon.png">
       <PackagePath>wwwroot\favicon.png</PackagePath>
     </AppxPackagedFile>

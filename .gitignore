@@ -1,1 +1,10 @@
+# Ignore Visual Studio files
 .vs/
+obj/
+bin/
+
+# Ignore macOS system files (optional)
+.DS_Store
+
+# Ignore any lock or temporary files
+*.lock

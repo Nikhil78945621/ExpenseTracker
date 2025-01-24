@@ -1,10 +1,12 @@
 ﻿@page "/debts"
 @inject ExpenseTracker.Services.UserService UserService
+@inject NavigationManager Navigation
+<link rel="stylesheet" href="css/Debt.css" />
 
 @code {
     private ExpenseTracker.Components.model.AppData data = new ExpenseTracker.Components.model.AppData();
     private ExpenseTracker.Components.model.Debt newDebt = new();
-    private int selectedUserId;
+    private ExpenseTracker.Components.model.User? loggedInUser;
     private string searchNote = string.Empty;
     private DateTime? filterStartDate;
     private DateTime? filterEndDate;
@@ -12,21 +14,28 @@
 
     protected override void OnInitialized()
     {
-        data = UserService.LoadData();
+        loggedInUser = UserService.GetLoggedInUser(); // Get the logged-in user
+        if (loggedInUser == null)
+        {
+            Navigation.NavigateTo("/login", true); // Redirect to login page if no user is logged in
+        }
+        else
+        {
+            data = UserService.LoadData() ?? new ExpenseTracker.Components.model.AppData
+                {
+                    Users = new List<ExpenseTracker.Components.model.User>(),
+                    Debts = new List<ExpenseTracker.Components.model.Debt>()
+                };
+        }
     }
 
     private void AddDebt()
     {
-        newDebt.Id = data.Debts.Count > 0
-            ? data.Debts.Max(d => d.Id) + 1
-            : 1;
-
-        newDebt.UserId = selectedUserId;
-
+        newDebt.Id = data.Debts.Count > 0 ? data.Debts.Max(d => d.Id) + 1 : 1;
+        newDebt.UserId = loggedInUser.Id; // Automatically assign to logged-in user
         data.Debts.Add(newDebt);
         UserService.SaveData(data);
-
-        newDebt = new();
+        newDebt = new(); // Reset the form
     }
 
     private void SortDebts()
@@ -44,11 +53,14 @@
 
     private IEnumerable<ExpenseTracker.Components.model.Debt> FilterDebts()
     {
-        var debts = data.Debts.Where(d => d.UserId == selectedUserId);
+        if (loggedInUser == null) return Enumerable.Empty<ExpenseTracker.Components.model.Debt>();
+
+        // Filter debts based on the logged-in user
+        var debts = data.Debts.Where(d => d.UserId == loggedInUser.Id);
 
         if (!string.IsNullOrEmpty(searchNote))
         {
-            debts = debts.Where(d => d.Note.Contains(searchNote, StringComparison.OrdinalIgnoreCase));
+            debts = debts.Where(d => !string.IsNullOrEmpty(d.Note) && d.Note.Contains(searchNote, StringComparison.OrdinalIgnoreCase));
         }
 
         if (filterStartDate.HasValue)
@@ -68,150 +80,97 @@
 <h3 class="text-center text-primary mt-4">Debt Management</h3>
 
 <div class="container mt-4">
-    <!-- Select User -->
-    <div class="card shadow-sm">
-        <div class="card-header bg-primary text-white">
-            <strong>Select User</strong>
-        </div>
-        <div class="card-body">
-            <label for="user" class="form-label">Choose a user:</label>
-            <select id="user" class="form-select" @bind="selectedUserId">
-                <option value="">-- Select User --</option>
-                @foreach (var user in data.Users)
-                {
-                    <option value="@user.Id">@user.Name</option>
-                }
-            </select>
-        </div>
-    </div>
-
-    @if (selectedUserId > 0)
+    @if (loggedInUser != null)
     {
-        <!-- Search and Date Filter -->
-        <div class="card mt-4 shadow-sm">
-            <div class="card-header bg-secondary text-white">
-                <strong>Filter Debts</strong>
-            </div>
-            <div class="card-body">
-                <label class="form-label">Search by Note:</label>
-                <input type="text" class="form-control mb-3" @bind="searchNote" placeholder="Search by Note" />
-
-                <div class="mb-3">
-                    <label class="form-label">Start Date:</label>
-                    <input type="date" class="form-control" @bind="filterStartDate" />
+            <!-- Search and Date Filter -->
+            <div class="card mt-4 shadow-sm">
+                <div class="card-header bg-secondary text-white">
+                    <strong>Filter Debts</strong>
                 </div>
+                <div class="card-body">
+                    <label class="form-label">Search by Note:</label>
+                    <input type="text" class="form-control mb-3" @bind="searchNote" placeholder="Search by Note" />
 
-                <div class="mb-3">
-                    <label class="form-label">End Date:</label>
-                    <input type="date" class="form-control" @bind="filterEndDate" />
+                    <div class="mb-3">
+                        <label class="form-label">Start Date:</label>
+                        <input type="date" class="form-control" @bind="filterStartDate" min="2010-01-01" max="2030-12-31" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">End Date:</label>
+                        <input type="date" class="form-control" @bind="filterEndDate" min="2010-01-01" max="2030-12-31" />
+                    </div>
+
+                    <button type="button" class="btn btn-primary" @onclick="SortDebts">Sort by Date</button>
                 </div>
-
-                <button type="button" class="btn btn-primary" @onclick="SortDebts">Sort by Date</button>
             </div>
-        </div>
 
-        <!-- Debt Details -->
-        <div class="card mt-4 shadow-sm">
-            <div class="card-header bg-secondary text-white">
-                <strong>Debt Details</strong>
-            </div>
-            <div class="card-body">
-                <div class="table-responsive">
-                    <table class="table table-bordered table-hover">
-                        <thead class="table-dark">
-                            <tr>
-                                <th>Date</th>
-                                <th>Note</th>
-                                <th>Total Amount</th>
-                                <th>Paid Amount</th>
-                                <th>Remaining</th>
-                            </tr>
-                        </thead>
-                        <tbody>
+            <!-- Debt Details -->
+            <div class="card mt-4 shadow-sm">
+                <div class="card-header bg-secondary text-white">
+                    <strong>Debt Details</strong>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-hover">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Note</th>
+                                    <th>Total Amount</th>
+                                    <th>Paid Amount</th>
+                                    <th>Remaining</th>
+                                </tr>
+                            </thead>
+                            <tbody>
                             @foreach (var debt in FilterDebts())
                             {
-                                <tr>
-                                    <td>@debt.Date.ToShortDateString()</td>
-                                    <td>@debt.Note</td>
-                                    <td class="text-warning">@debt.Amount</td>
-                                    <td class="text-success">@debt.PaidAmount</td>
-                                    <td class="text-danger">@(debt.Amount - debt.PaidAmount)</td>
-                                </tr>
+                                        <tr>
+                                            <td>@debt.Date.ToShortDateString()</td>
+                                            <td>@debt.Note</td>
+                                            <td class="text-warning">@debt.Amount</td>
+                                            <td class="text-success">@debt.PaidAmount</td>
+                                            <td class="text-danger">@(debt.Amount - debt.PaidAmount)</td>
+                                        </tr>
                             }
-                        </tbody>
-                    </table>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Add Debt Form -->
-        <div class="card mt-4 shadow-sm">
-            <div class="card-header bg-dark text-white">
-                <strong>Add New Debt</strong>
+            <!-- Add Debt Form -->
+            <div class="card mt-4 shadow-sm">
+                <div class="card-header bg-dark text-white">
+                    <strong>Add New Debt</strong>
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label">Date:</label>
+                            <input type="date" class="form-control" @bind="newDebt.Date" min="2010-01-01" max="2030-12-31" />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Note:</label>
+                            <input type="text" class="form-control" @bind="newDebt.Note" placeholder="Enter Note" />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Total Amount:</label>
+                            <input type="number" class="form-control" @bind="newDebt.Amount" placeholder="Enter total amount" />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Paid Amount:</label>
+                            <input type="number" class="form-control" @bind="newDebt.PaidAmount" placeholder="Enter paid amount" />
+                        </div>
+                        <button type="button" class="btn btn-primary w-100" @onclick="AddDebt">Add Debt</button>
+                    </form>
+                </div>
             </div>
-            <div class="card-body">
-                <form>
-                    <div class="mb-3">
-                        <label class="form-label">Date:</label>
-                        <input type="date" class="form-control" @bind="newDebt.Date" />
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Note:</label>
-                        <input type="text" class="form-control" @bind="newDebt.Note" placeholder="Enter Note" />
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Total Amount:</label>
-                        <input type="number" class="form-control" @bind="newDebt.Amount" placeholder="Enter total amount" />
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Paid Amount:</label>
-                        <input type="number" class="form-control" @bind="newDebt.PaidAmount" placeholder="Enter paid amount" />
-                    </div>
-                    <button type="button" class="btn btn-primary w-100" @onclick="AddDebt">Add Debt</button>
-                </form>
-            </div>
-        </div>
     }
     else
     {
-        <div class="container mt-4 text-center">
-            <p class="alert alert-info">Please select a user to view or add debts.</p>
-        </div>
+            <div class="container mt-4 text-center">
+                <p class="alert alert-info">Please log in to view or add debts.</p>
+            </div>
     }
-</div>
-
-<!-- Custom Styling -->
-<style>
-    .container {
-        max-width: 900px;
-    }
-
-    .card {
-        border-radius: 8px;
-    }
-
-    .card-header {
-        font-size: 18px;
-        font-weight: bold;
-    }
-
-    .form-control, .form-select {
-        font-size: 16px;
-        padding: 10px;
-    }
-
-    .table th, .table td {
-        text-align: center;
-        font-size: 16px;
-        padding: 12px;
-    }
-
-    .table-responsive {
-        overflow-x: auto;
-    }
-
-    .btn {
-        font-size: 16px;
-        padding: 10px;
-    }
-</style>
+</div>  

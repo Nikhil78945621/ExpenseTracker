@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-01-05T06:51:23.101</Modified>
+      <Modified>2025-01-23T14:04:17.211</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2025-01-05T00:58:03.699</Modified>
+      <Modified>2025-01-16T01:32:52.847</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ExpenseTracker.runtimeconfig.json">
       <PackagePath>ExpenseTracker.runtimeconfig.json</PackagePath>
@@ -44,11 +44,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ExpenseTracker.dll">
       <PackagePath>ExpenseTracker.dll</PackagePath>
-      <Modified>2025-01-05T06:51:22.513</Modified>
+      <Modified>2025-01-23T14:04:15.597</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>ExpenseTracker.exe</PackagePath>
-      <Modified>2025-01-05T06:51:22.531</Modified>
+      <Modified>2025-01-23T14:04:15.686</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
@@ -65,6 +65,30 @@
     <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\wwwroot\css\bootstrap\bootstrap.min.css.map">
       <PackagePath>wwwroot\css\bootstrap\bootstrap.min.css.map</PackagePath>
       <Modified>2025-01-03T13:25:53.985</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\wwwroot\css\Dashboard.css">
+      <PackagePath>wwwroot\css\Dashboard.css</PackagePath>
+      <Modified>2025-01-15T12:10:46.464</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\wwwroot\css\Debt.css">
+      <PackagePath>wwwroot\css\Debt.css</PackagePath>
+      <Modified>2025-01-15T07:06:49.038</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\wwwroot\css\Expense.css">
+      <PackagePath>wwwroot\css\Expense.css</PackagePath>
+      <Modified>2025-01-15T03:40:58.546</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\wwwroot\css\Income.css">
+      <PackagePath>wwwroot\css\Income.css</PackagePath>
+      <Modified>2025-01-15T07:50:19.749</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\wwwroot\css\Login.css">
+      <PackagePath>wwwroot\css\Login.css</PackagePath>
+      <Modified>2025-01-16T01:38:04.364</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\wwwroot\css\Register.css">
+      <PackagePath>wwwroot\css\Register.css</PackagePath>
+      <Modified>2025-01-16T01:47:40.008</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\wwwroot\favicon.png">
       <PackagePath>wwwroot\favicon.png</PackagePath>
@@ -304,7 +328,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ExpenseTracker.deps.json">
       <PackagePath>ExpenseTracker.deps.json</PackagePath>
-      <Modified>2025-01-05T00:58:02.492</Modified>
+      <Modified>2025-01-15T04:11:32.776</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\nikhi\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.54\lib\net8.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>
@@ -660,7 +684,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\nikhi\OneDrive - London Metropolitan University\Third Year\Aplication Development\ExpenseTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\staticwebassets.build.endpoints.json">
       <PackagePath>ExpenseTracker.staticwebassets.endpoints.json</PackagePath>
-      <Modified>2025-01-05T00:57:42.108</Modified>
+      <Modified>2025-01-16T01:47:51.488</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\nikhi\.nuget\packages\microsoft.maui.controls.compatibility\8.0.83\lib\net8.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.pri">
       <PackagePath>Microsoft.Maui.Controls.Compatibility.pri</PackagePath>

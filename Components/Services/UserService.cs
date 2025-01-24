@@ -1,5 +1,4 @@
 ﻿using System.Text.Json;
-
 using ExpenseTracker.Components.model;
 
 namespace ExpenseTracker.Services
@@ -8,6 +7,8 @@ namespace ExpenseTracker.Services
     {
         private static readonly string FolderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "LocalDB");
         private static readonly string FilePath = Path.Combine(FolderPath, "appdata.json");
+
+        private User? _loggedInUser;
 
         public AppData LoadData()
         {
@@ -46,7 +47,18 @@ namespace ExpenseTracker.Services
         {
             var data = LoadData();
             string hashedPassword = Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(password));
-            return data.Users.FirstOrDefault(u => u.Email == email && u.Password == hashedPassword);
+            _loggedInUser = data.Users.FirstOrDefault(u => u.Email == email && u.Password == hashedPassword);
+            return _loggedInUser;
+        }
+
+        public User? GetLoggedInUser()
+        {
+            return _loggedInUser;
+        }
+
+        public void Logout()
+        {
+            _loggedInUser = null;
         }
     }
 }

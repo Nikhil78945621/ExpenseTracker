@@ -1,27 +1,48 @@
 ﻿@page "/"
 @inject ExpenseTracker.Services.UserService UserService
+@inject NavigationManager NavigationManager
+
+<link rel="stylesheet" href="css/Dashboard.css" />
 
 @code {
-    private ExpenseTracker.Components.model.AppData data = new ExpenseTracker.Components.model.AppData();
+    private ExpenseTracker.Components.model.AppData data = new();
+    private ExpenseTracker.Components.model.User? currentUser;
 
     protected override void OnInitialized()
     {
-        data = UserService.LoadData() ?? new ExpenseTracker.Components.model.AppData();
+        currentUser = UserService.GetLoggedInUser();
+        if (currentUser == null)
+        {
+            NavigationManager.NavigateTo("/login");
+            return;
+        }
+
+        data = UserService.LoadData();
     }
 
-    private decimal TotalIncomes => data.Incomes?.Sum(i => i.Amount) ?? 0;
-    private decimal TotalExpenses => data.Expenses?.Sum(e => e.Amount) ?? 0;
-    private decimal TotalDebt => data.Debts?.Sum(d => d.Amount) ?? 0;
-    private decimal ClearedDebt => data.Debts?.Sum(d => d.PaidAmount) ?? 0;
+    private int TotalTransactions => data.Incomes.Count(i => i.UserId == currentUser?.Id) +
+                                     data.Expenses.Count(e => e.UserId == currentUser?.Id) +
+                                     data.Debts.Count(d => d.UserId == currentUser?.Id);
+
+    private decimal TotalBalance => TotalIncomes - TotalExpenses + (TotalDebt - ClearedDebt);
+
+    private decimal TotalIncomes => data.Incomes.Where(i => i.UserId == currentUser?.Id).Sum(i => i.Amount);
+    private decimal TotalExpenses => data.Expenses.Where(e => e.UserId == currentUser?.Id).Sum(e => e.Amount);
+    private decimal TotalDebt => data.Debts.Where(d => d.UserId == currentUser?.Id).Sum(d => d.Amount);
+    private decimal ClearedDebt => data.Debts.Where(d => d.UserId == currentUser?.Id).Sum(d => d.PaidAmount);
     private decimal RemainingDebt => TotalDebt - ClearedDebt;
 
-    private ExpenseTracker.Components.model.Income HighestIncome => data.Incomes?.OrderByDescending(i => i.Amount).FirstOrDefault();
-    private ExpenseTracker.Components.model.Expense HighestExpense => data.Expenses?.OrderByDescending(e => e.Amount).FirstOrDefault();
-    private ExpenseTracker.Components.model.Debt HighestDebt => data.Debts?.OrderByDescending(d => d.Amount).FirstOrDefault();
+    private IEnumerable<ExpenseTracker.Components.model.Debt> PendingDebts =>
+        data.Debts.Where(d => d.UserId == currentUser?.Id && d.PaidAmount < d.Amount);
 
-    private ExpenseTracker.Components.model.Income LowestIncome => data.Incomes?.OrderBy(i => i.Amount).FirstOrDefault();
-    private ExpenseTracker.Components.model.Expense LowestExpense => data.Expenses?.OrderBy(e => e.Amount).FirstOrDefault();
-    private ExpenseTracker.Components.model.Debt LowestDebt => data.Debts?.OrderBy(d => d.Amount).FirstOrDefault();
+    private IEnumerable<ExpenseTracker.Components.model.Income> TopIncomes =>
+        data.Incomes.Where(i => i.UserId == currentUser?.Id).OrderByDescending(i => i.Amount).Take(5);
+
+    private IEnumerable<ExpenseTracker.Components.model.Expense> TopExpenses =>
+        data.Expenses.Where(e => e.UserId == currentUser?.Id).OrderByDescending(e => e.Amount).Take(5);
+
+    private IEnumerable<ExpenseTracker.Components.model.Debt> TopDebts =>
+        data.Debts.Where(d => d.UserId == currentUser?.Id).OrderByDescending(d => d.Amount).Take(5);
 }
 
 <h3 class="text-center text-primary">Expense Tracker Dashboard</h3>
@@ -39,90 +60,93 @@
                         <li class="list-group-item"><strong>Total Debt:</strong> <span class="text-warning">@TotalDebt</span></li>
                         <li class="list-group-item"><strong>Cleared Debt:</strong> <span class="text-success">@ClearedDebt</span></li>
                         <li class="list-group-item"><strong>Remaining Debt:</strong> <span class="text-danger">@RemainingDebt</span></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- Statistics Section -->
-        <div class="col-md-6">
-            <div class="card shadow-sm">
-                <div class="card-header bg-dark text-white">Statistics</div>
-                <div class="card-body">
-                    <ul class="list-group">
-                        <li class="list-group-item"><strong>Highest Income:</strong> @HighestIncome?.Amount </li>
-                        <li class="list-group-item"><strong>Lowest Income:</strong> @LowestIncome?.Amount </li>
-                        <li class="list-group-item"><strong>Highest Expense:</strong> @HighestExpense?.Amount </li>
-                        <li class="list-group-item"><strong>Lowest Expense:</strong> @LowestExpense?.Amount </li>
-                        <li class="list-group-item"><strong>Highest Debt:</strong> @HighestDebt?.Amount </li>
-                        <li class="list-group-item"><strong>Lowest Debt:</strong> @LowestDebt?.Amount </li>
+                        <li class="list-group-item"><strong>Total Transactions:</strong> <span class="text-info">@TotalTransactions</span></li>
+                        <li class="list-group-item"><strong>Total Balance:</strong> <span class="text-primary">@TotalBalance</span></li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Pending Debts Table -->
-    <div class="mt-4">
-        <div class="card shadow-sm">
-            <div class="card-header bg-secondary text-white">Pending Debts</div>
-            <div class="card-body">
-                <div class="table-responsive">
-                    <table class="table table-bordered table-hover">
-                        <thead class="table-dark">
-                            <tr>
-                                <th>User</th>
-                                <th>Total Debt</th>
-                                <th>Paid Amount</th>
-                                <th>Remaining</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach (var debt in data.Debts)
-                            {
-                                var user = data.Users.FirstOrDefault(u => u.Id == debt.UserId);
-                                <tr>
-                                    <td>@user?.Name</td>
-                                    <td class="text-warning">@debt.Amount</td>
-                                    <td class="text-success">@debt.PaidAmount</td>
-                                    <td class="text-danger">@(debt.Amount - debt.PaidAmount)</td>
-                                </tr>
-                            }
-                        </tbody>
-                    </table>
+    <!-- Top 5 Transactions -->
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-header bg-success text-white">Top 5 Incomes</div>
+                <div class="card-body">
+                    <ul class="list-group">
+                        @foreach (var income in TopIncomes)
+                        {
+                                    <li class="list-group-item"><span class="text-success">@income.Amount</span></li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-header bg-danger text-white">Top 5 Expenses</div>
+                <div class="card-body">
+                    <ul class="list-group">
+                        @foreach (var expense in TopExpenses)
+                        {
+                                <li class="list-group-item"><span class="text-danger">@expense.Amount</span></li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-header bg-warning text-white">Top 5 Debts</div>
+                <div class="card-body">
+                    <ul class="list-group">
+                        @foreach (var debt in TopDebts)
+                        {
+                                <li class="list-group-item"><span class="text-warning">@debt.Amount</span></li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pending Debts Section -->
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <div class="card shadow-sm">
+                <div class="card-header bg-danger text-white">Pending Debts</div>
+                <div class="card-body">
+                    @if (PendingDebts.Any())
+                    {
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-hover">
+                                    <thead class="table-dark">
+                                        <tr>
+                                            <th>Note/Source</th>
+                                            <th>Due Date</th>
+                                            <th>Amount</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    @foreach (var debt in PendingDebts)
+                                    {
+                                            <tr>
+                                                <td>@debt.Note</td>
+                                                <td>@debt.DueDate.ToShortDateString()</td>
+                                                <td class="text-danger">@debt.Amount</td>
+                                            </tr>
+                                    }
+                                    </tbody>
+                                </table>
+                            </div>
+                    }
+                    else
+                    {
+                            <p class="alert alert-info text-center">You have no pending debts.</p>
+                    }
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-<!-- Custom Styling -->
-<style>
-    .container {
-        max-width: 900px;
-    }
-
-    .card {
-        border-radius: 8px;
-    }
-
-    .card-header {
-        font-size: 18px;
-        font-weight: bold;
-    }
-
-    .list-group-item {
-        font-size: 16px;
-        padding: 10px;
-    }
-
-    .table-responsive {
-        overflow-x: auto;
-    }
-
-    .table th, .table td {
-        text-align: center;
-        font-size: 16px;
-        padding: 12px;
-    }
-</style>
